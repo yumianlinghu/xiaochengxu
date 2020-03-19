@@ -2,7 +2,7 @@
 //获取应用实例
 const app = getApp()
 Page({
-  data: {
+  data: { 
     fixnav:false,
     alreadyBtm:false,
     indicatorDots:true,
