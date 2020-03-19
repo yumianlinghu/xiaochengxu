@@ -1,0 +1,117 @@
+<!--index.wxml-->
+
+<view class="index-container">
+    <view class="search">
+     <view class="search-box">
+       <icon class="search-icon" type="search" size="18" color="#8F949D"/>
+        <input class="search-input" disabled placeholder="职位/公司名称"/>
+     </view>
+    </view>
+     <swiper class="swiper"
+        indicator-dots="{{indicatorDots}}"
+        circular="{{circular}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view  class="select-area select-normal">
+        <view class="select-box">
+          <picker mode="selector" bindchange="bindEduPickerChange" value="{{eduIndex}}" 
+          range="{{eduArray}}" range-key="name">
+             <text wx:if="{{eduIndex==0}}">学历</text>
+             <text wx:else class="selected-text">{{eduArray[eduIndex].name}}</text>
+             <i-icon type="unfold" color="#80848f" size="20"/>
+          </picker>
+        </view>
+        <view class="select-box">
+          <picker mode="selector" bindchange="bindSexPickerChange" value="{{sexIndex}}" 
+          range="{{sexArray}}" range-key="name">
+          <text wx:if="{{sexIndex==0}}">性别</text>
+             <text wx:else class="selected-text">{{sexArray[sexIndex].name}}</text>
+             <i-icon type="unfold" color="#80848f" size="20"/>
+          </picker>
+        </view>
+        <view class="select-box">
+          <picker mode="selector" bindchange="bindAgePickerChange" value="{{ageIndex}}" 
+          range="{{ageArray}}" range-key="name">
+             <text wx:if="{{ageIndex==0}}">年龄</text>
+             <text wx:else class="selected-text">{{ageArray[ageIndex].name}}</text>
+             <i-icon type="unfold" color="#80848f" size="20"/>
+          </picker>
+        </view>
+        <view class="select-box">
+          <picker mode="selector" bindchange="bindIncomePickerChange" value="{{incomeIndex}}" 
+          range="{{incomeArray}}" range-key="name">
+             <text wx:if="{{incomeIndex==0}}">收入</text>
+             <text wx:else class="selected-text">{{incomeArray[incomeIndex].name}}</text>
+             <i-icon type="unfold" color="#80848f" size="20"/>
+          </picker>
+        </view>
+      </view>
+      <!-- 固定到顶部开始 -->
+      <view wx:if="{{fixnav}}" class="select-area topnav">
+        <view class="select-box">
+          <picker mode="selector" bindchange="bindEduPickerChange" value="{{eduIndex}}" 
+          range="{{eduArray}}" range-key="name">
+             <text wx:if="{{eduIndex==0}}">学历</text>
+             <text wx:else class="selected-text">{{eduArray[eduIndex].name}}</text>
+             <i-icon type="unfold" color="#80848f" size="20"/>
+          </picker>
+        </view>
+        <view class="select-box">
+          <picker mode="selector" bindchange="bindSexPickerChange" value="{{sexIndex}}" 
+          range="{{sexArray}}" range-key="name">
+          <text wx:if="{{sexIndex==0}}">性别</text>
+             <text wx:else class="selected-text">{{sexArray[sexIndex].name}}</text>
+             <i-icon type="unfold" color="#80848f" size="20"/>
+          </picker>
+        </view>
+        <view class="select-box">
+          <picker mode="selector" bindchange="bindAgePickerChange" value="{{ageIndex}}" 
+          range="{{ageArray}}" range-key="name">
+             <text wx:if="{{ageIndex==0}}">年龄</text>
+             <text wx:else class="selected-text">{{ageArray[ageIndex].name}}</text>
+             <i-icon type="unfold" color="#80848f" size="20"/>
+          </picker>
+        </view>
+        <view class="select-box">
+          <picker mode="selector" bindchange="bindIncomePickerChange" value="{{incomeIndex}}" 
+          range="{{incomeArray}}" range-key="name">
+             <text wx:if="{{incomeIndex==0}}">收入</text>
+             <text wx:else class="selected-text">{{incomeArray[incomeIndex].name}}</text>
+             <i-icon type="unfold" color="#80848f" size="20"/>
+          </picker>
+        </view>
+      </view>
+      <!-- 固定到顶部结束 -->
+      <view class="query-list">
+         <view class="list" wx:for="{{listData}}" wx:key="id" bindtap="getDetail" data-id="{{item.id}}">
+         <view class="info left">
+            {{item.title}}
+            <view class="personal-info"> 
+              <block>
+                {{item.edu}}
+              </block>
+              |
+              <block>
+             {{item.sex}}
+              </block>
+              |
+              <block>
+              {{item.age}}
+              </block>
+            </view>
+            <view class="request">
+                 职位要求：{{item.request}}
+            </view>
+         </view>
+         <view class="info right">
+               {{item.income}}
+         </view>
+         </view>
+      </view>
+      <view class="foot-line">-----我也是有底线的-----</view>
+</view>

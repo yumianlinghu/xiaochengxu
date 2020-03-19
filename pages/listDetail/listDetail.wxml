@@ -1,0 +1,27 @@
+<!--pages/listDetail/listDetail.wxml-->
+<view class="detail">
+    <view class="title">
+    {{detailData.title}}
+    </view>
+    <view class="sex info">
+    <label>性别</label>
+    <text>{{detailData.sex}}</text>
+    </view>
+    <view class="age info">
+    <label>年龄</label>
+    <text>{{detailData.age}}</text>
+    </view>
+    <view class="edu info">
+    <label>学历</label>
+    <text>{{detailData.edu}}</text>
+    </view>
+    <view class="income info">
+    <label>收入</label>
+    <text>{{detailData.income}}</text>
+    </view>
+    <view class="request">
+    <label>------职位要求------</label>
+    <text>{{detailData.request}}</text>
+    </view>
+</view>
+

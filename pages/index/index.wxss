@@ -1,0 +1,125 @@
+.index-container{
+}
+.search{
+  
+}
+.search-box{
+  position: relative;
+  width:90%;
+  margin: 15rpx auto;
+}
+.search-icon{
+  position:absolute;
+  z-index: 10;
+  padding-top:16rpx;
+  padding-left:15rpx;
+}
+.search-input{
+  padding-left: 60rpx;
+  font-size:30rpx; 
+  background: #F1F1F1;
+  height: 65rpx;
+  border-radius:65rpx; 
+}
+.swiper{
+  height: 300rpx;
+  width: 100%;
+}
+.swiper-item{
+   height: 300rpx;
+   width: 100%;
+}
+.swiper-item.demo-text-1{
+  background: #00B26A;
+}
+.swiper-item.demo-text-2{
+  background: rgb(100, 117, 110);
+}
+.swiper-item.demo-text-3{
+  background: rgb(5, 78, 49);
+}
+.select-area{
+  height: 80rpx;
+  border-top: 1rpx solid #EBEFF2;
+  border-bottom: 1rpx solid #EBEFF2;
+}
+.topnav{
+    position: fixed;
+    top: 0rpx;
+    z-index:99;
+    background: #fff;
+    width: 100%;
+}
+.select-box{
+  width: 25%;
+  padding: 0 20rpx;
+  white-space: nowrap;
+  box-sizing: border-box;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  display: inline-block;
+  color:#333333;
+  font-size:28rpx;
+}
+.select-box text{
+  max-width: 75%;
+  vertical-align: middle;
+  display: inline-block;
+  white-space: nowrap; 
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.select-box .selected-text{
+   color:#00B26A;
+}
+.select-box .i-icon{
+  max-width: 25%;
+}
+.query-list{
+  box-sizing: border-box;
+}
+.query-list .list{
+  display: flex;
+   padding:20rpx;
+   border-bottom: 1rpx solid #EBEFF2;
+}
+
+.query-list .left{
+  color: #3C3E43;
+  font-size: 30rpx; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.query-list .personal-info{
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #8F949D;
+  font-size: 24rpx;
+}
+.query-list .request{
+   color: #6B717B;
+   font-size: 24rpx;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow:ellipsis;
+}
+.query-list .info{
+  width: 100%;
+}
+.query-list .right{
+  text-align: center;
+  width:350rpx;
+  color:#FF824F;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.foot-line{
+  font-size: 28rpx;
+  text-align: center;
+  height: 80rpx;
+  color: #B1B1B1;
+  background: #F1F1F1;
+  line-height: 80rpx;
+}
